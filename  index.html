@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <title>Peter's invite</title>
+
+    </head> 
+    <body>
+        <div class="container">
+                <h1 class = "header_text">Dinner Thursday Night After Work ? 👉🏻👈🏻</h1>
+		
+            </div>
+            <div class="gif_container">
+                <img src="giphy.gif">
+            </div>
+            <div class = "buttons">
+                <button class="btn" id = "yesButton" onclick="nextPage()">Yes</button>
+                <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">No</button>
+		<button class="btn" id="ewButton" onmouseover="moveButton()" onclick="moveButton()">Eww No</button>
+                <script>
+                    function nextPage() {
+                        window.location.href = "yes.html";
+                    }
+                    
+                    function moveButton() {
+                        var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth) - 85;
+                        var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight) - 40;
+                        document.getElementById('noButton').style.left = `${x}px`;
+                        document.getElementById('noButton').style.top = `${y}px`;
+			
+			var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth) - 55;
+                        var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight) - 30;
+			document.getElementById('ewButton').style.left = `${x}px`;
+                        document.getElementById('ewButton').style.top = `${y}px`;
+                    }
+                </script> 
+            </div>
+        </div>
+       
+    </body> 
+
+</html>
